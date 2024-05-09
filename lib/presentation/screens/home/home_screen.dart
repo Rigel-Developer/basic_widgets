@@ -58,7 +58,9 @@ class _CustomListTile extends StatelessWidget {
         // Navigator.of(context).pushNamed(menuItem.link);
         // context.pushNamed(HomeScreen.name);
 
-        context.go(menuItem.link);
+        // context.go(menuItem.link);
+
+        context.push(menuItem.link);
       },
     );
   }
