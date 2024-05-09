@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -55,8 +56,9 @@ class _CustomListTile extends StatelessWidget {
         // );
 
         // Navigator.of(context).pushNamed(menuItem.link);
+        // context.pushNamed(HomeScreen.name);
 
-        context.push(menuItem.link);
+        context.go(menuItem.link);
       },
     );
   }
