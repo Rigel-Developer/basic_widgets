@@ -14,11 +14,17 @@ class MenuItem {
   });
 }
 
-const appMenuItems = <MenuItem>{
+const appMenuItems = <MenuItem>[
   MenuItem(
     title: 'Botones',
     subTitle: 'Varios botones en Flutter',
     link: '/buttons',
     icon: Icons.smart_button_outlined,
   ),
-};
+  MenuItem(
+    title: 'Tarjetas',
+    subTitle: 'Varios tarjetas en Flutter',
+    link: '/cards',
+    icon: Icons.card_giftcard,
+  ),
+];
