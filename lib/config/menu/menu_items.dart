@@ -16,6 +16,12 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+    title: 'Counter Screen',
+    subTitle: 'Counter Screen',
+    link: '/counter',
+    icon: Icons.plus_one,
+  ),
+  MenuItem(
     title: 'Botones',
     subTitle: 'Varios botones en Flutter',
     link: '/buttons',
@@ -62,5 +68,11 @@ const appMenuItems = <MenuItem>[
     subTitle: 'Varios controles de UI en Flutter',
     link: '/ui-controls',
     icon: Icons.settings,
+  ),
+  MenuItem(
+    title: 'Cambiador de Tema',
+    subTitle: 'Cambiador de tema en Flutter',
+    link: '/theme-changer',
+    icon: Icons.color_lens,
   ),
 ];

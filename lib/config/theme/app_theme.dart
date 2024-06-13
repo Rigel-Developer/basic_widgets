@@ -15,7 +15,8 @@ const colorList = <Color>[
 
 class AppTheme {
   final int selectedColorIndex;
-  AppTheme({this.selectedColorIndex = 0})
+  final bool isDark;
+  AppTheme({this.isDark = false, this.selectedColorIndex = 0})
       : assert(selectedColorIndex >= 0,
             'selectedColorIndex should be greater than 0'),
         assert(selectedColorIndex < colorList.length,
@@ -23,6 +24,7 @@ class AppTheme {
 
   ThemeData getTheme() => ThemeData(
         useMaterial3: true,
+        brightness: isDark ? Brightness.dark : Brightness.light,
         colorSchemeSeed: colorList[selectedColorIndex],
         appBarTheme: const AppBarTheme(
           centerTitle: false,
