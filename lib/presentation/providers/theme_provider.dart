@@ -8,3 +8,22 @@ final colorListProvider = Provider((ref) => colorList);
 
 //un simple int
 final selectedColorProvider = StateProvider((ref) => 0);
+
+//un objeto de tipo appTheme custom
+final themeNotifierProvider =
+    StateNotifierProvider<ThemeNotifier, AppTheme>((ref) {
+  return ThemeNotifier();
+});
+
+//controller o notifier
+class ThemeNotifier extends StateNotifier<AppTheme> {
+  ThemeNotifier() : super(AppTheme());
+
+  void toogleDarkMode() {
+    state = state.copyWith(isDark: !state.isDark);
+  }
+
+  void updateColor(int index) {
+    state = state.copyWith(selectedColorIndex: index);
+  }
+}

@@ -30,4 +30,11 @@ class AppTheme {
           centerTitle: false,
         ),
       );
+
+  AppTheme copyWith({int? selectedColorIndex, bool? isDark}) {
+    return AppTheme(
+      selectedColorIndex: selectedColorIndex ?? this.selectedColorIndex,
+      isDark: isDark ?? this.isDark,
+    );
+  }
 }
